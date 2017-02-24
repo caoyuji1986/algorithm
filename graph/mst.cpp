@@ -119,6 +119,7 @@ class Kruskal : public MST {
     }
 };
 
+
 int main(int argc, char* argv[]) {
     if (argc != 2) {
         cout<<argv[0]<<" [prim|prim_heap|kruskal]"<<endl;
