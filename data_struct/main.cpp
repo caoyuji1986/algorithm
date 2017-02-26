@@ -19,6 +19,7 @@
 #include<algorithm>
 #include"union_find.hpp"
 #include"tree.hpp"
+#include"segment_tree.hpp"
 using namespace std;
 
 int unifind() {
@@ -58,6 +59,17 @@ int tree() {
     //t.visit_level(root);
     return 0;
 }
+int segment_tree() {
+    SegmentTree st(10);
+    st.build(0, 10, 1);
+    st.insert(2, 4, 1);
+    st.insert(2, 4, 1);
+    int ret = st.search(3, 4, 1);
+    cout<<ret<<endl;
+    return 0;
+}
 int main() {
-    return tree();
+    int a = 6;
+    cout<<(a&(-a))<<endl;
+    return 1;
 }
