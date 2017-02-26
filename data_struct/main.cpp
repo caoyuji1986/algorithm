@@ -18,9 +18,10 @@
 #include<sstream>
 #include<algorithm>
 #include"union_find.hpp"
+#include"tree.hpp"
 using namespace std;
 
-int main() {
+int unifind() {
     int n = 0;
     cin>>n;
     UnionFind uf(n);
@@ -39,4 +40,24 @@ int main() {
     }
     return 0;
 }
-
+int tree() {
+    int n;
+    cin>>n;
+    vector<char> array;
+    for (int i = 1; i <= n; ++i) {
+        char t;
+        cin>>t;
+        array.push_back(t);
+    }
+    Tree t;
+    TreeNode* root = t.build_from_array(array);
+    //t.visit_pre(root);
+    //t.visit_mid(root);
+    //t.visit_pos(root);
+    t.lca(root);
+    //t.visit_level(root);
+    return 0;
+}
+int main() {
+    return tree();
+}
